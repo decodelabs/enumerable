@@ -1,0 +1,30 @@
+{
+    "name": "decodelabs/enumerable",
+    "description": "Helper traits for enums",
+    "type": "library",
+    "keywords": [ ],
+    "license": "MIT",
+    "authors": [ {
+            "name": "Tom Wright",
+            "email": "tom@inflatablecookie.com"
+        } ],
+    "require": {
+        "php": "^8.1",
+        "decodelabs/coercion": "^0.2.8",
+        "decodelabs/dictum": "^0.6.2",
+        "decodelabs/exceptional": "^0.4.5"
+    },
+    "require-dev": {
+        "decodelabs/phpstan-decodelabs": "^0.6.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "DecodeLabs\\Enumerable\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-develop": "0.1.x-dev"
+        }
+    }
+}
