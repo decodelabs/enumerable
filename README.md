@@ -187,9 +187,13 @@ All enum types can be instantiaed with the following methods:
 
 ```php
 MyEnum::fromKey('<key>');
+MyEnum::tryFromKey('<key>');
 MyEnum::fromValue('<value>');
+MyEnum::tryFromValue('<value>');
 MyEnum::fromName('<name>');
+MyEnum::tryFromName('<name>');
 MyEnum::fromIndex('<index>');
+MyEnum::tryFromIndex('<index>');
 ```
 
 
