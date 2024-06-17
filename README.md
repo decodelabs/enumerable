@@ -190,6 +190,11 @@ MyEnum::fromKey('<key>');
 MyEnum::fromValue('<value>');
 MyEnum::fromName('<name>');
 MyEnum::fromIndex('<index>');
+// or
+MyEnum::tryFromKey('<key>');
+MyEnum::tryFromValue('<value>');
+MyEnum::tryFromName('<name>');
+MyEnum::tryFromIndex('<index>');
 ```
 
 

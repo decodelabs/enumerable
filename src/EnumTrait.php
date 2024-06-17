@@ -42,6 +42,50 @@ trait EnumTrait
     }
 
 
+    /**
+     * @param int|string|static|null $value
+     */
+    public static function fromAny(
+        string|int|Enum|null $value
+    ): static {
+        if (null !== ($value = static::tryFromAny($value))) {
+            return $value;
+        }
+
+        throw Exceptional::InvalidArgument(
+            'Unknown value: ' . $value
+        );
+    }
+
+    /**
+     * @param int|string|static|null $value
+     */
+    public static function tryFromAny(
+        string|int|Enum|null $value
+    ): ?static {
+        if (
+            $value instanceof static ||
+            $value === null
+        ) {
+            return $value;
+        }
+
+        if (is_int($value)) {
+            return static::tryFromValue($value);
+        }
+
+        if (null !== ($output = static::tryFromName($value))) {
+            return $output;
+        }
+
+        if (null !== ($output = static::tryFromValue($value))) {
+            return $output;
+        }
+
+        return null;
+    }
+
+
     public static function fromName(
         ?string $name
     ): static {
