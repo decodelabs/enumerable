@@ -25,6 +25,20 @@ interface Enum
      */
     public static function getOptions(): array;
 
+    /**
+     * @param int|string|static|null $value
+     */
+    public static function fromAny(
+        int|string|self|null $value
+    ): static;
+
+    /**
+     * @param int|string|static|null $value
+     */
+    public static function tryFromAny(
+        int|string|self|null $value
+    ): ?static;
+
     public static function fromName(
         ?string $name
     ): static;
