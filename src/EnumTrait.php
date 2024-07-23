@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace DecodeLabs\Enumerable;
 
+use DecodeLabs\Coercion;
 use DecodeLabs\Exceptional;
 
 /**
@@ -48,12 +49,12 @@ trait EnumTrait
     public static function fromAny(
         string|int|Enum|null $value
     ): static {
-        if (null !== ($value = static::tryFromAny($value))) {
-            return $value;
+        if (null !== ($output = static::tryFromAny($value))) {
+            return $output;
         }
 
         throw Exceptional::InvalidArgument(
-            'Unknown value: ' . $value
+            'Unknown value: ' . Coercion::toString($value)
         );
     }
 
@@ -101,8 +102,17 @@ trait EnumTrait
     public static function tryFromName(
         ?string $name
     ): ?static {
+        if ($name === null) {
+            return null;
+        }
+
+        $uName = ucfirst($name);
+
         foreach (static::cases() as $case) {
-            if ($case->name === $name) {
+            if (
+                $case->name === $name ||
+                $case->name === $uName
+            ) {
                 return $case;
             }
         }
