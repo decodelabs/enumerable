@@ -14,25 +14,29 @@ use DecodeLabs\Coercion;
 trait IntValueTrait
 {
     /**
-     * @param ?int $name
+     * @param ?int $value
      */
     public static function fromValue(
-        int|string|null $name
+        int|string|null $value
     ): static {
         return static::from(
-            Coercion::toInt($name)
+            Coercion::toInt($value)
         );
     }
 
     /**
-     * @param ?int $name
+     * @param ?int $value
      */
     public static function tryFromValue(
-        int|string|null $name
+        int|string|null $value
     ): ?static {
-        return static::tryFrom(
-            Coercion::toInt($name)
-        );
+        $value = Coercion::toIntOrNull($value);
+
+        if ($value === null) {
+            return null;
+        }
+
+        return static::tryFrom($value);
     }
 
     public function getValue(): int
