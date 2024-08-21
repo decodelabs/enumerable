@@ -1,3 +1,6 @@
+## v0.1.3 (2024-08-21)
+* Removed Dictum dependency
+
 ## v0.1.2 (2024-07-23)
 * Fixed int coercion in tryFromAny()
 * Fixed string comparison with ucfirst(name)

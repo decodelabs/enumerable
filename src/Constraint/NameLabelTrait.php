@@ -9,12 +9,14 @@ declare(strict_types=1);
 
 namespace DecodeLabs\Enumerable\Constraint;
 
-use DecodeLabs\Dictum;
-
 trait NameLabelTrait
 {
     public function getLabel(): string
     {
-        return Dictum::name($this->name);
+        $name = str_replace('_', ' ', $this->name);
+        $name = (string)preg_replace('/([^ A-Z])([A-Z\/])/u', '$1 $2', $name);
+        $name = ucwords(strtolower($name));
+        $name = (string)preg_replace('/([\/])([^ ])/u', '$1 $2', $name);
+        return $name;
     }
 }
