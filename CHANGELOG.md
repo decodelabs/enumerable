@@ -1,3 +1,5 @@
+* Added @phpstan-require-implements constraints
+
 ## v0.1.3 (2024-08-21)
 * Removed Dictum dependency
 

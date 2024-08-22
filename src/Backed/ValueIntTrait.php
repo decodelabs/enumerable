@@ -13,6 +13,9 @@ use DecodeLabs\Enumerable\Constraint\Backed\IntValueKeyTrait;
 use DecodeLabs\Enumerable\Constraint\Backed\IntValueTrait;
 use DecodeLabs\Enumerable\Constraint\NameLabelTrait;
 
+/**
+ * @phpstan-require-implements ValueInt
+ */
 trait ValueIntTrait
 {
     use IntValueKeyTrait;
