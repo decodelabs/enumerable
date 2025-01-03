@@ -16,7 +16,7 @@ use DecodeLabs\Enumerable\Enum;
  * Key = value
  * Label = name
  *
- * @extends Enum<int,string>
+ * @extends Enum<int,int>
  */
 interface ValueInt extends Enum, BackedEnum
 {

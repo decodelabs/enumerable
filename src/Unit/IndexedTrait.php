@@ -13,6 +13,9 @@ use DecodeLabs\Enumerable\Constraint\IndexKeyTrait;
 use DecodeLabs\Enumerable\Constraint\NameLabelTrait;
 use DecodeLabs\Enumerable\Constraint\Unit\NameValueTrait;
 
+/**
+ * @phpstan-require-implements Indexed
+ */
 trait IndexedTrait
 {
     /**

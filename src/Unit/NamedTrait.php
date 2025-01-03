@@ -13,6 +13,9 @@ use DecodeLabs\Enumerable\Constraint\NameKeyTrait;
 use DecodeLabs\Enumerable\Constraint\NameLabelTrait;
 use DecodeLabs\Enumerable\Constraint\Unit\NameValueTrait;
 
+/**
+ * @phpstan-require-implements Named
+ */
 trait NamedTrait
 {
     /**

@@ -15,6 +15,7 @@ use DecodeLabs\Exceptional;
 /**
  * @template TKey of int|string
  * @template TValue of int|string
+ * @phpstan-require-implements Enum<TKey, TValue>
  */
 trait EnumTrait
 {
