@@ -1,3 +1,5 @@
+* Added PHP8.4 to CI workflow
+
 ## v0.1.4 (2025-01-03)
 * Fixed Backed Int Enum interface definitions
 * Added @phpstan-require-implements constraints
