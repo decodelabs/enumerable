@@ -1,3 +1,4 @@
+## v0.2.0 (2025-02-11)
 * Removed getIndexedCases() method
 * Upgraded PHPStan to v2
 * Added PHP8.4 to CI workflow
