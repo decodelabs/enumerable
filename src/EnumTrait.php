@@ -146,24 +146,16 @@ trait EnumTrait
             return null;
         }
 
-        return static::getIndexedCases()[$index] ?? null;
-    }
-
-    /**
-     * @return array<int,static>
-     */
-    public static function getIndexedCases(): array
-    {
-        return array_values(static::cases());
+        return static::getCases()[$index] ?? null;
     }
 
     public function getIndex(): int
     {
-        return (int)array_search($this, static::getIndexedCases(), true);
+        return (int)array_search($this, static::getCases(), true);
     }
 
     /**
-     * @return array<TKey, TValue>
+     * @return array<TKey,TValue>
      */
     public static function getValues(): array
     {

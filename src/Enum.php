@@ -16,12 +16,12 @@ namespace DecodeLabs\Enumerable;
 interface Enum
 {
     /**
-     * @return array<static>
+     * @return list<static>
      */
     public static function getCases(): array;
 
     /**
-     * @return array<TKey, string>
+     * @return array<TKey,string>
      */
     public static function getOptions(): array;
 
@@ -76,10 +76,6 @@ interface Enum
         ?int $index
     ): ?static;
 
-    /**
-     * @return array<static>
-     */
-    public static function getIndexedCases(): array;
 
     public function getIndex(): int;
 
