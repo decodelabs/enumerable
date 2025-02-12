@@ -55,7 +55,7 @@ trait EnumTrait
         }
 
         throw Exceptional::InvalidArgument(
-            'Unknown value: ' . Coercion::toString($value)
+            message: 'Unknown value: ' . Coercion::toString($value)
         );
     }
 
@@ -96,7 +96,7 @@ trait EnumTrait
         }
 
         throw Exceptional::InvalidArgument(
-            'Unknown label: ' . $name
+            message: 'Unknown label: ' . $name
         );
     }
 
@@ -135,7 +135,7 @@ trait EnumTrait
         }
 
         throw Exceptional::InvalidArgument(
-            'Unknown index: ' . $index
+            message: 'Unknown index: ' . $index
         );
     }
 

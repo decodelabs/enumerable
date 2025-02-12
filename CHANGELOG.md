@@ -1,3 +1,5 @@
+* Improved Exception syntax
+
 ## v0.2.0 (2025-02-11)
 * Removed getIndexedCases() method
 * Upgraded PHPStan to v2
