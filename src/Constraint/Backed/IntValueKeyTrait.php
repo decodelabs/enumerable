@@ -26,7 +26,7 @@ trait IntValueKeyTrait
         int|string|null $key
     ): static {
         return static::fromValue(
-            Coercion::toIntOrNull($key)
+            Coercion::tryInt($key)
         );
     }
 
@@ -37,7 +37,7 @@ trait IntValueKeyTrait
         int|string|null $key
     ): ?static {
         return static::tryFromValue(
-            Coercion::toIntOrNull($key)
+            Coercion::tryInt($key)
         );
     }
 

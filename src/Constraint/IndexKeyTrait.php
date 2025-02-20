@@ -29,7 +29,7 @@ trait IndexKeyTrait
         int|string|null $key
     ): static {
         return static::fromIndex(
-            Coercion::toIntOrNull($key)
+            Coercion::tryInt($key)
         );
     }
 
@@ -40,7 +40,7 @@ trait IndexKeyTrait
         int|string|null $key
     ): ?static {
         return static::tryFromIndex(
-            Coercion::toIntOrNull($key)
+            Coercion::tryInt($key)
         );
     }
 

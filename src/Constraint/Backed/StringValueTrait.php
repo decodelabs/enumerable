@@ -20,7 +20,7 @@ trait StringValueTrait
         int|string|null $name
     ): static {
         return static::from(
-            Coercion::toString($name)
+            Coercion::asString($name)
         );
     }
 
@@ -31,7 +31,7 @@ trait StringValueTrait
         int|string|null $name
     ): ?static {
         return static::tryFrom(
-            Coercion::toString($name)
+            Coercion::asString($name)
         );
     }
 

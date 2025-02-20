@@ -55,7 +55,7 @@ trait EnumTrait
         }
 
         throw Exceptional::InvalidArgument(
-            message: 'Unknown value: ' . Coercion::toString($value)
+            message: 'Unknown value: ' . Coercion::asString($value)
         );
     }
 

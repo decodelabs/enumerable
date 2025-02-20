@@ -29,7 +29,7 @@ trait NameKeyTrait
         int|string|null $key
     ): static {
         return static::fromName(
-            Coercion::toStringOrNull($key)
+            Coercion::tryString($key)
         );
     }
 
@@ -40,7 +40,7 @@ trait NameKeyTrait
         int|string|null $key
     ): ?static {
         return static::tryFromName(
-            Coercion::toStringOrNull($key)
+            Coercion::tryString($key)
         );
     }
 
