@@ -1,3 +1,8 @@
+## v0.2.1 (2025-02-20)
+* Upgraded Coercion dependency
+* Improved Exception syntax
+* Updated dependencies
+
 ## v0.2.0 (2025-02-11)
 * Removed getIndexedCases() method
 * Upgraded PHPStan to v2

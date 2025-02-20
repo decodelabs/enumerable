@@ -20,7 +20,7 @@ trait IntValueTrait
         int|string|null $value
     ): static {
         return static::from(
-            Coercion::toInt($value)
+            Coercion::asInt($value)
         );
     }
 
@@ -30,7 +30,7 @@ trait IntValueTrait
     public static function tryFromValue(
         int|string|null $value
     ): ?static {
-        $value = Coercion::toIntOrNull($value);
+        $value = Coercion::tryInt($value);
 
         if ($value === null) {
             return null;
