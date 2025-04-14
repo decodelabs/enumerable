@@ -11,8 +11,6 @@
 
 Enumerable provides a simple structure of interfaces and traits to unlock the full power of PHP enums.
 
-_Get news and updates on the [DecodeLabs blog](https://blog.decodelabs.com)._
-
 ---
 
 ## Installation
