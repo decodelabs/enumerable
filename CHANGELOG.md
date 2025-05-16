@@ -1,27 +1,69 @@
-## v0.2.1 (2025-02-20)
-* Upgraded Coercion dependency
-* Improved Exception syntax
-* Updated dependencies
+# Changelog
 
-## v0.2.0 (2025-02-11)
-* Removed getIndexedCases() method
-* Upgraded PHPStan to v2
-* Added PHP8.4 to CI workflow
-* Made PHP8.4 minimum version
+All notable changes to this project will be documented in this file.<br>
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## v0.1.4 (2025-01-03)
-* Fixed Backed Int Enum interface definitions
-* Added @phpstan-require-implements constraints
+### Unreleased
+--
 
-## v0.1.3 (2024-08-21)
-* Removed Dictum dependency
+---
 
-## v0.1.2 (2024-07-23)
-* Fixed int coercion in tryFromAny()
-* Fixed string comparison with ucfirst(name)
+### [v0.2.1](https://github.com/decodelabs/enumerable/commits/v0.2.1) - 20th February 2025
 
-## v0.1.1 (2024-06-17)
-* Added fromAny and tryFromAny
+- Upgraded Coercion dependency
+- Improved Exception syntax
+- Updated dependencies
 
-## v0.1.0 (2024-06-14)
-* Built initial implementation
+[Full list of changes](https://github.com/decodelabs/enumerable/compare/v0.2.0...v0.2.1)
+
+---
+
+### [v0.2.0](https://github.com/decodelabs/enumerable/commits/v0.2.0) - 11th February 2025
+
+- Removed getIndexedCases() method
+- Upgraded PHPStan to v2
+- Added PHP8.4 to CI workflow
+- Made PHP8.4 minimum version
+
+[Full list of changes](https://github.com/decodelabs/enumerable/compare/v0.1.4...v0.2.0)
+
+---
+
+### [v0.1.4](https://github.com/decodelabs/enumerable/commits/v0.1.4) - 3rd January 2025
+
+- Fixed Backed Int Enum interface definitions
+- Added @phpstan-require-implements constraints
+
+[Full list of changes](https://github.com/decodelabs/enumerable/compare/v0.1.3...v0.1.4)
+
+---
+
+### [v0.1.3](https://github.com/decodelabs/enumerable/commits/v0.1.3) - 21st August 2024
+
+- Removed Dictum dependency
+
+[Full list of changes](https://github.com/decodelabs/enumerable/compare/v0.1.2...v0.1.3)
+
+---
+
+### [v0.1.2](https://github.com/decodelabs/enumerable/commits/v0.1.2) - 23rd July 2024
+
+- Fixed int coercion in tryFromAny()
+- Fixed string comparison with ucfirst(name)
+
+[Full list of changes](https://github.com/decodelabs/enumerable/compare/v0.1.1...v0.1.2)
+
+---
+
+### [v0.1.1](https://github.com/decodelabs/enumerable/commits/v0.1.1) - 17th June 2024
+
+- Added fromAny and tryFromAny
+
+[Full list of changes](https://github.com/decodelabs/enumerable/compare/v0.1.0...v0.1.1)
+
+---
+
+### [v0.1.0](https://github.com/decodelabs/enumerable/commits/v0.1.0) - 14th June 2024
+
+- Built initial implementation
