@@ -121,6 +121,12 @@ trait EnumTrait
         return null;
     }
 
+    public static function nameToLabel(
+        ?string $name
+    ): ?string {
+        return static::tryFromName($name)?->getLabel();
+    }
+
     public function getName(): string
     {
         // @phpstan-ignore-next-line

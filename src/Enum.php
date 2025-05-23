@@ -49,6 +49,10 @@ interface Enum
         ?string $name
     ): ?static;
 
+    public static function nameToLabel(
+        ?string $name
+    ): ?string;
+
     public function getName(): string;
 
     /**
