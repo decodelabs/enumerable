@@ -46,6 +46,6 @@ trait NameKeyTrait
 
     public function getKey(): string
     {
-        return $this->name;
+        return $this->getName();
     }
 }

@@ -37,6 +37,6 @@ trait NameValueTrait
 
     public function getValue(): string
     {
-        return $this->name;
+        return $this->getName();
     }
 }

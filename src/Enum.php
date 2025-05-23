@@ -15,6 +15,8 @@ namespace DecodeLabs\Enumerable;
  */
 interface Enum
 {
+    public const bool CamelName = false;
+
     /**
      * @return list<static>
      */

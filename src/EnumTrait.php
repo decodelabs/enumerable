@@ -123,6 +123,11 @@ trait EnumTrait
 
     public function getName(): string
     {
+        // @phpstan-ignore-next-line
+        if(self::CamelName) {
+            return lcfirst($this->name);
+        }
+
         return $this->name;
     }
 
