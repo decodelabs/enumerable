@@ -232,6 +232,21 @@ trait EnumTrait
     }
 
     /**
+     * @return array<string>
+     */
+    public static function getNamesLessThan(
+        ?string $name,
+        bool $includeSelf = false
+    ): array {
+        return array_map(
+            fn($item) => $item->getName(),
+            static::tryFromName($name)?->getLessThan(
+                $includeSelf
+            ) ?? []
+        );
+    }
+
+    /**
      * @return array<static>
      */
     public function getGreaterThan(
@@ -260,5 +275,20 @@ trait EnumTrait
         }
 
         return $output;
+    }
+
+    /**
+     * @return array<string>
+     */
+    public static function getNamesGreaterThan(
+        ?string $name,
+        bool $includeSelf = false
+    ): array {
+        return array_map(
+            fn($item) => $item->getName(),
+            static::tryFromName($name)?->getGreaterThan(
+                $includeSelf
+            ) ?? []
+        );
     }
 }

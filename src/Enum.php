@@ -131,9 +131,25 @@ interface Enum
     ): array;
 
     /**
+     * @return array<string>
+     */
+    public static function getNamesLessThan(
+        ?string $name,
+        bool $includeSelf = false
+    ): array;
+
+    /**
      * @return array<static>
      */
     public function getGreaterThan(
+        bool $includeSelf = false
+    ): array;
+
+    /**
+     * @return array<string>
+     */
+    public static function getNamesGreaterThan(
+        ?string $name,
         bool $includeSelf = false
     ): array;
 }
