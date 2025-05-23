@@ -207,4 +207,58 @@ trait EnumTrait
 
         return $output;
     }
+
+    /**
+     * @return array<static>
+     */
+    public function getLessThan(
+        bool $includeSelf = false
+    ): array {
+        $output = [];
+
+        foreach (static::cases() as $case) {
+            if ($case === $this) {
+                if ($includeSelf) {
+                    $output[] = $case;
+                }
+
+                break;
+            }
+
+            $output[] = $case;
+        }
+
+        return $output;
+    }
+
+    /**
+     * @return array<static>
+     */
+    public function getGreaterThan(
+        bool $includeSelf = false
+    ): array {
+        $output = [];
+        $found = false;
+
+        foreach (static::cases() as $case) {
+            if (
+                !$found &&
+                $case === $this
+            ) {
+                $found = true;
+
+                if ($includeSelf) {
+                    $output[] = $case;
+                }
+
+                continue;
+            }
+
+            if($found) {
+                $output[] = $case;
+            }
+        }
+
+        return $output;
+    }
 }

@@ -120,4 +120,20 @@ interface Enum
      * @return TValue
      */
     public function getValue(): int|string;
+
+
+
+    /**
+     * @return array<static>
+     */
+    public function getLessThan(
+        bool $includeSelf = false
+    ): array;
+
+    /**
+     * @return array<static>
+     */
+    public function getGreaterThan(
+        bool $includeSelf = false
+    ): array;
 }
