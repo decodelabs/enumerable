@@ -52,6 +52,11 @@ interface Enum
     public function getName(): string;
 
     /**
+     * @return array<string>
+     */
+    public static function getNames(): array;
+
+    /**
      * @param TKey|null $key
      */
     public static function fromKey(
@@ -69,6 +74,11 @@ interface Enum
      * @return TKey
      */
     public function getKey(): int|string;
+
+    /**
+     * @return array<TKey>
+     */
+    public static function getKeys(): array;
 
     public static function fromIndex(
         ?int $index

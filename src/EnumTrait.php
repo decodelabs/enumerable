@@ -131,6 +131,35 @@ trait EnumTrait
         return $this->name;
     }
 
+    /**
+     * @return array<string>
+     */
+    public static function getNames(): array
+    {
+        $output = [];
+
+        foreach (static::cases() as $case) {
+            $output[] = $case->getName();
+        }
+
+        return $output;
+    }
+
+
+    /**
+     * @return array<TKey>
+     */
+    public static function getKeys(): array
+    {
+        $output = [];
+
+        foreach (static::cases() as $case) {
+            $output[] = $case->getKey();
+        }
+
+        return $output;
+    }
+
 
     public static function fromIndex(
         ?int $index
