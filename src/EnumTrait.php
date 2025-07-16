@@ -130,7 +130,7 @@ trait EnumTrait
     public function getName(): string
     {
         // @phpstan-ignore-next-line
-        if(self::CamelName) {
+        if (self::CamelName) {
             return lcfirst($this->name);
         }
 
@@ -239,7 +239,7 @@ trait EnumTrait
         bool $includeSelf = false
     ): array {
         return array_map(
-            fn($item) => $item->getName(),
+            fn ($item) => $item->getName(),
             static::tryFromName($name)?->getLessThan(
                 $includeSelf
             ) ?? []
@@ -269,7 +269,7 @@ trait EnumTrait
                 continue;
             }
 
-            if($found) {
+            if ($found) {
                 $output[] = $case;
             }
         }
@@ -285,7 +285,7 @@ trait EnumTrait
         bool $includeSelf = false
     ): array {
         return array_map(
-            fn($item) => $item->getName(),
+            fn ($item) => $item->getName(),
             static::tryFromName($name)?->getGreaterThan(
                 $includeSelf
             ) ?? []
