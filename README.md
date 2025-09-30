@@ -15,6 +15,8 @@ Enumerable provides a simple structure of interfaces and traits to unlock the fu
 
 ## Installation
 
+This package requires PHP 8.4 or higher.
+
 Install via Composer:
 
 ```bash
