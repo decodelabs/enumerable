@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @package Enumerable
- * @license http://opensource.org/licenses/MIT
+ * Enumerable
+ * @license https://opensource.org/licenses/MIT
  */
 
 declare(strict_types=1);
