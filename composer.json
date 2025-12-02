@@ -2,7 +2,7 @@
     "name": "decodelabs/enumerable",
     "description": "Helper traits for enums",
     "type": "library",
-    "keywords": [],
+    "keywords": [ ],
     "license": "MIT",
     "authors": [
         {
@@ -17,7 +17,7 @@
         "decodelabs/exceptional": "^0.6"
     },
     "require-dev": {
-        "decodelabs/chorus": "^0.1",
+        "decodelabs/chorus": ">0",
         "decodelabs/phpstan-decodelabs": "^0.7"
     },
     "autoload": {
