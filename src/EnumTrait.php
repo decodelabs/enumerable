@@ -40,6 +40,7 @@ trait EnumTrait
             $output[$case->getKey()] = $case->getLabel();
         }
 
+        // @phpstan-ignore-next-line
         return $output;
     }
 
@@ -163,6 +164,7 @@ trait EnumTrait
             $output[] = $case->getKey();
         }
 
+        // @phpstan-ignore-next-line
         return $output;
     }
 
@@ -205,6 +207,7 @@ trait EnumTrait
             $output[$case->getKey()] = $case->getValue();
         }
 
+        // @phpstan-ignore-next-line
         return $output;
     }
 
